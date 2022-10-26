@@ -17,15 +17,16 @@ import java.util.UUID;
 @AllArgsConstructor
 public class AppUserService implements UserDetailsService {
 
+
     private final static String USER_NOT_FOUND_MSG =
             "user with email %s not found";
+
+// TODO 改成使用@Autowired依賴注入
     private final AppUserRepository appUserRepository;
 
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
     private final ConfirmationTokenService confirmationTokenService;
-
-
 
 
     @Override
